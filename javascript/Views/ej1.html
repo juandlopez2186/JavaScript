@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Eventos JavaScript</title>
+ 
+<style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+
+</head>
+
+<body>
+ 
+<h2>Eventos JavaScript</h2>
+   
+<table>
+<tr>    
+<th>Evento</th>
+        
+<th>Ejemplo de Aplicación</th> 
+</tr>
+
+    <tr>         
+    <td>Click</td>
+     
+    <td><input type="submit" value="Haz click " id="click"></td>
+    </tr>
+    <td>mouseover</td>
+     
+    <td><div onmouseover="handleMouseover(this)" onmouseout="handleMouseout(this)">
+      Pasa el cursor sobre este elemento para resaltarlo.
+    </div>
+    </td>
+    </tr>
+
+   
+    <tr>
+    <td>keydown</td>
+
+    <td><input type="text" onkeydown="handleKeydown(event)" placeholder="Presiona Enter"></td>
+    </tr>
+
+
+    <tr> 
+    <td>onkeypress</td>
+      
+    <td><input type="text" placeholder="Presiona una clave" id="okp"></form></td>
+    </tr>
+    
+    <tr>
+      <td>submit</td>
+ 
+    <td><form onsubmit="handleSubmit(event)">
+      <input type="text" name="name" placeholder="Nombre">
+      
+  <input type="email" name="email" placeholder="Correo electrónico">
+      <button type="submit">Enviar</button>
+    </td>
+    </tr>
+
+
+    <tr>
+       <td class="tdt">Onunload</td>
+            
+      <td><input type="submit" onunload="onUnFunction()"></td>
+    </tr>
+
+
+    <tr>
+      <td>blur</td>
+      
+      <td><input type="text" onblur="handleBlur()" placeholder="Escribe algo y luego haz clic fuera del campo"></td>
+    </tr>
+    <script>
+       function handleBlur() {
+      alert('El campo de entrada ha perdido el enfoque');
+    }
+    </script>
+    
+   
+    <tr>
+    <td>scroll</td>
+
+    <td><body onscroll="handleScroll()">
+      <div id="scrollMessage" style="display: none;">¡Has realizado un desplazamiento!</div>
+      
+      <div style="height: 500px;"></div>
+      </body>
+    </td>
+    </tr>
+
+    <tr>
+      <td>change</td>
+      <td><select id="mySelect" onchange="handleChange()">
+        <option value="option1">Opción 1</option>
+        
+       
+    <option value="option2">Opción 2</option>
+        <option value="option3">Opción 3</option>
+      </select>
+    </td>
+    </tr>
+
+    <tr>
+      <td>resize</td>
+      <td><body onresize="handleResize()">
+       
+      <h1>Prueba el evento de redimensionamiento</h1>
+  
+      </body></td>
+    </tr>
+
+  </table>
+  <script type="text/JavaScript" src="../Assets/JAVA/ej1.js"></script>
+</body>
+</html>
